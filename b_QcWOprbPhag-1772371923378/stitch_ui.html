@@ -1,0 +1,255 @@
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f4258c",
+                        "background-light": "#f8f5f7",
+                        "background-dark": "#221019",
+                        "gold-accent": "#d4af37",
+                        "muted-cream": "#faf7f2",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .parisian-border {
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        .soft-focus:hover img {
+            filter: blur(2px);
+            transition: filter 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Parisian Boutique Header -->
+<header class="w-full bg-muted-cream dark:bg-background-dark border-b border-gold-accent/20 sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 py-4">
+<div class="flex flex-col items-center gap-4">
+<!-- Top Bar: Search & Icons -->
+<div class="w-full flex justify-between items-center text-xs tracking-widest uppercase text-slate-500 dark:text-slate-400">
+<div class="flex gap-6">
+<a class="hover:text-primary transition-colors" href="#">Colecciones</a>
+<a class="hover:text-primary transition-colors" href="#">Sobre Nosotros</a>
+</div>
+<div class="flex gap-6">
+<button class="flex items-center gap-1 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">search</span>
+                                Buscar
+                            </button>
+<button class="flex items-center gap-1 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">shopping_bag</span>
+                                (0)
+                            </button>
+</div>
+</div>
+<!-- Center Logo with thin gold dividers -->
+<div class="flex items-center w-full gap-4">
+<div class="flex-1 h-[1px] bg-gold-accent/30"></div>
+<div class="flex flex-col items-center">
+<h1 class="text-2xl md:text-3xl font-black tracking-tighter text-slate-900 dark:text-slate-100">
+                                ENCANTO <span class="text-primary">&amp;</span> COLOR
+                            </h1>
+<p class="text-[10px] uppercase tracking-[0.4em] text-gold-accent">Handmade Luxury</p>
+</div>
+<div class="flex-1 h-[1px] bg-gold-accent/30"></div>
+</div>
+<!-- Navigation -->
+<nav class="flex gap-8 text-xs font-semibold uppercase tracking-widest text-slate-700 dark:text-slate-300">
+<a class="hover:text-primary transition-colors" href="#">Lazos</a>
+<a class="hover:text-primary transition-colors" href="#">Diademas</a>
+<a class="hover:text-primary transition-colors" href="#">Personalizados</a>
+<a class="hover:text-primary transition-colors" href="#">Novedades</a>
+</nav>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Split Layout -->
+<section class="grid grid-cols-1 lg:grid-cols-2 min-h-[70vh] bg-muted-cream dark:bg-background-dark overflow-hidden">
+<div class="flex flex-col justify-center px-10 lg:px-24 py-16 order-2 lg:order-1">
+<span class="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-4">Colección 2024</span>
+<h2 class="text-5xl lg:text-7xl font-light text-slate-900 dark:text-slate-100 mb-6 leading-tight">
+                        Detalles <span class="italic">&amp;</span> <br/>Variedades
+                    </h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg max-w-md mb-10 leading-relaxed font-light">
+                        Artesanía meticulosa que eleva la esencia de cada accesorio. Piezas únicas hechas a mano con perlas y seda fina.
+                    </p>
+<div class="flex gap-4">
+<button class="bg-primary hover:bg-primary/90 text-white px-10 py-4 rounded-full text-sm font-bold uppercase tracking-widest transition-all hover:scale-105 shadow-lg shadow-primary/20">
+                            Shop Now
+                        </button>
+<button class="border border-gold-accent/40 text-slate-800 dark:text-slate-200 px-10 py-4 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-gold-accent/5 transition-all">
+                            Ver Catálogo
+                        </button>
+</div>
+</div>
+<div class="relative min-h-[400px] lg:h-auto order-1 lg:order-2">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Close up of a luxury pink handmade bow with pearls" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDxam58mb_OrB7D1vdU1UgfO5L7EXpuavRaWvc1aAw3mgdyPwvvsS20FnXR3twTVFEJd2laKSQ9Wc4T3OqexZyQI9_lPTlN5UIS2Dt98Ll1cskKUAKf9R53CXNOnneH_AyckKcdRSrZLA__-6yuFJCfINHOoqUbBOPoeAe9AeZBMzK2-Q-pe93-wwfp4HFXbTd_dzV4GgeIzYA24zg9sDoi889mySXJqCT67oKIrrH85IdWnwFettE4fme3pf36YU0B1_kRPCRWjrA');"></div>
+<div class="absolute inset-0 bg-primary/5 mix-blend-multiply"></div>
+</div>
+</section>
+<!-- Circular Categories -->
+<section class="max-w-7xl mx-auto px-6 py-24">
+<div class="flex flex-col items-center mb-16">
+<h3 class="text-sm uppercase tracking-[0.5em] text-gold-accent mb-2">Categorías</h3>
+<div class="w-12 h-[1px] bg-gold-accent/50"></div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+<a class="group flex flex-col items-center text-center" href="#">
+<div class="size-40 md:size-52 rounded-full overflow-hidden mb-6 border-2 border-transparent group-hover:border-gold-accent transition-all duration-500 p-2">
+<div class="w-full h-full rounded-full bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Silk ribbon rolls in soft pastel colors" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBfRbTCPZjcnkKDK1jK0-f19_I5C-BX_i2k70sL0UYqPhwixkCY8y2vfLnoeO-JDphGH_OYapD_h_clfi7Dm9JA0isDWpRIZIuScvyWbhjnRHe-6NsnlQ2BoekNfqYtq_XUMw6s1JD_pBhPSDdQnWwRiUh3dWLLXKK21n6NX2rCHzE7UqGx6akh-Aaix0zwh-8crlbizDFcKkE3nDMKjQNCcckuttpang91MKTOECMdYWdOrcpGl9QpVgvaaYE9caoSteV4UZLYKaM');"></div>
+</div>
+<span class="text-xs uppercase tracking-widest font-bold group-hover:text-primary transition-colors">Lazos de Seda</span>
+</a>
+<a class="group flex flex-col items-center text-center" href="#">
+<div class="size-40 md:size-52 rounded-full overflow-hidden mb-6 border-2 border-transparent group-hover:border-gold-accent transition-all duration-500 p-2">
+<div class="w-full h-full rounded-full bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Floral accessory details with embroidery" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDbrSeAn2ClB_zvvV5n9V42a8aQgr9wAwI_d1mqNEBL-yGpsoFjW8Dw3zzfUYHvXw5skb-v_saT25HDpzNRLDLsChbtm0bwUjPWSXRfXBV2qtf0JPEfg3eSJ8TfjSea96Non4CED4yGeA-hm7fbNITvrBIZMw3p8ljLHfNayxPck9vbbmFyGpJy0cBcrIj7AA2DFZdkTNm0nQhdK9wEw0oRzjSQrfqSueZQ8N1sEvFPv4HCxV1V8jLDgPPX-onmnzj9L3OyuLII5bg');"></div>
+</div>
+<span class="text-xs uppercase tracking-widest font-bold group-hover:text-primary transition-colors">Colección Floral</span>
+</a>
+<a class="group flex flex-col items-center text-center" href="#">
+<div class="size-40 md:size-52 rounded-full overflow-hidden mb-6 border-2 border-transparent group-hover:border-gold-accent transition-all duration-500 p-2">
+<div class="w-full h-full rounded-full bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Elegant velvet headband on a display stand" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC51v1g1c6BEbCAp8BM78vp37aiMuoIuqR1rlhWYKGb4K_NLaLah6qezWKn-om-HZKc1iVhsW9BaAyEnbCMa4KZt-BB2qmlvz0SI1XNF4IwvtOVF5wmTzdScT8qpUEigWWA8UQmREox8GUGVZAARQ5Cj8-Auir2dH4a0y1EQiJyQBcO6XiZWAPBaY3tG1HheubUykp9nd6_YV_Wr487j44lBM9FJCWZnCM2Yl-NRvOQkdbUYLaF-2b6EWgilsMVvm-6PwFN8H2ei2M');"></div>
+</div>
+<span class="text-xs uppercase tracking-widest font-bold group-hover:text-primary transition-colors">Diademas Premium</span>
+</a>
+<a class="group flex flex-col items-center text-center" href="#">
+<div class="size-40 md:size-52 rounded-full overflow-hidden mb-6 border-2 border-transparent group-hover:border-gold-accent transition-all duration-500 p-2">
+<div class="w-full h-full rounded-full bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Girl wearing handmade colorful accessories" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD01vdRN6CFrBgS09ky5DakqlL6XekMJXOwlEJTQsDE7PhFSlim-xw6XkaSxy1HhGVE7wWr6A2fkBf5rug71KMEXiYkKr4jznrKv8TvpLat-VtRbOCh7kp4MRdbSpI4dhVj_6dbn4hPtXLxxMmj6Qshe7L_3ks0Uf9drW-tC0lo5wbKpCnf19vYtt_pWHgUlMRs1lWSY4wL1msGZ1MDLEMIDCgWOeofi_pk_ijpOwlQmbOE6cR_Uj-7SjvARknEmkzCCrufV07R4Dk');"></div>
+</div>
+<span class="text-xs uppercase tracking-widest font-bold group-hover:text-primary transition-colors">Línea Infantil</span>
+</a>
+</div>
+</section>
+<!-- Product Grid with Soft Focus -->
+<section class="bg-muted-cream/50 dark:bg-background-dark/50 py-24">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="text-3xl font-light text-slate-900 dark:text-slate-100 italic">Nuestras Creaciones</h2>
+<p class="text-slate-500 text-sm tracking-widest uppercase mt-2">Novedades Semanales</p>
+</div>
+<a class="text-xs font-bold uppercase tracking-widest text-primary border-b border-primary/20 pb-1 hover:border-primary transition-all" href="#">Ver Todos</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Product Item -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] overflow-hidden bg-white rounded-lg soft-focus">
+<img alt="Lazo de Seda Rose Gold" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Luxury pink bow with gold embroidery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGUx3pq4AyG8orw-GvsT12ntB7sAKZbQthA_THf2fxMx10GV6HkHC_dmmF_lC0z_44fWzuXg9zz9CxX5LKzIJlLzqZp6chMPj3ph5uCmnF7DaXiQgyNtV_MjO2dNbj5noiEKEvGsC9WahSTEgYDwjZNidsTYFMkLGdtMU9JQB_cKq61OkgL-bxUxdioauzVtSl1nFUj8SkgCmqx5mJIu0l7-Vyweu5A-4w1ErorID0VvzLicDq-3czuOke56LE4uxNktoJv4GLTd8"/>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="bg-white/90 text-slate-900 px-6 py-3 rounded-full text-[10px] uppercase font-bold tracking-widest shadow-xl">Añadir al Carrito</button>
+</div>
+</div>
+<div class="mt-4 text-center">
+<h4 class="text-sm font-medium text-slate-800 dark:text-slate-200 uppercase tracking-widest">Lazo Rose Gold</h4>
+<p class="text-primary font-bold mt-1">$45.000</p>
+</div>
+</div>
+<!-- Product Item -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] overflow-hidden bg-white rounded-lg soft-focus">
+<img alt="Diadema Perlas &amp; Flores" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Floral headband with pearls and delicate fabric" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA2JEU5K42ZylDcXgzQD3XQdtEAtXVcaObDao7KkWIj3b1uujzg6k-xw5qU2ihtDpqmCfwhWCmPVQ1D5s5eia1gHiShiuho0QTldh7wMM2XGx8ZMFFqYfnuySADadGVMMIs7UJtPIGT3juA44M-58h-tsE0Po8fPEmq2uwldVjW-Eufc88lB9pkLilkFYJMcNXaaoURRTGug0B7CRCRINkjMzVQSBtjD1IZ65hUuC1e31yckoNvTWXAkak4sek6eGT_oKTAZ_CJGE"/>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="bg-white/90 text-slate-900 px-6 py-3 rounded-full text-[10px] uppercase font-bold tracking-widest shadow-xl">Añadir al Carrito</button>
+</div>
+</div>
+<div class="mt-4 text-center">
+<h4 class="text-sm font-medium text-slate-800 dark:text-slate-200 uppercase tracking-widest">Diadema Perlas &amp; Flores</h4>
+<p class="text-primary font-bold mt-1">$62.000</p>
+</div>
+</div>
+<!-- Product Item -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] overflow-hidden bg-white rounded-lg soft-focus">
+<img alt="Lazo Bautizo Vintage" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Minimalist white bow for baptism" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuoNyN9q8nMWR9_zJ4t6oG32uyxa0ts8nlehX_oYyGyWwyWLTxSyz0Zh3oP_BVhpKjWmS3PtllTnhyy_Di-LRUsa8iBcgwfI9SnTG2BREi1_-s-ASaGe6nKSQbxRIKaI21-s2S2i9F0yu_C6fM7txj_b30OgEqWRQR89TppMPKbDbKwWEOJlsHg1bP0RZfY2yfLBrAbfg8RPdREmktVjBVxzkPuFeviMP6iCyReKI_wANQCVhwHnnN8GhwOum04eBCm_sp45wYAyc"/>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="bg-white/90 text-slate-900 px-6 py-3 rounded-full text-[10px] uppercase font-bold tracking-widest shadow-xl">Añadir al Carrito</button>
+</div>
+</div>
+<div class="mt-4 text-center">
+<h4 class="text-sm font-medium text-slate-800 dark:text-slate-200 uppercase tracking-widest">Lazo Bautizo Vintage</h4>
+<p class="text-primary font-bold mt-1">$38.000</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Sophisticated Footer -->
+<footer class="bg-muted-cream dark:bg-background-dark pt-24 pb-12 border-t border-gold-accent/10">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 md:col-span-1">
+<h4 class="text-xl font-black tracking-tighter text-slate-900 dark:text-slate-100 mb-6">ENCANTO <br/><span class="text-primary">&amp;</span> COLOR</h4>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed font-light">
+                            Creamos momentos inolvidables a través de detalles que capturan la elegancia y la dulzura de la infancia y la feminidad.
+                        </p>
+<div class="flex gap-4 mt-6">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">brand_awareness</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="text-[10px] uppercase tracking-[0.3em] font-bold text-gold-accent mb-6">Ubicación</h5>
+<p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
+                            Showroom Neiva, Huila<br/>
+                            Calle 10 # 5 - 24<br/>
+                            Centro Boutique
+                        </p>
+<a class="text-primary text-xs font-bold uppercase tracking-widest flex items-center gap-1" href="#">
+                            Ver Mapa <span class="material-symbols-outlined text-sm">location_on</span>
+</a>
+</div>
+<div>
+<h5 class="text-[10px] uppercase tracking-[0.3em] font-bold text-gold-accent mb-6">Atención</h5>
+<ul class="space-y-3 text-slate-600 dark:text-slate-300 text-sm font-light">
+<li><a class="hover:text-primary transition-colors" href="#">Envíos Nacionales</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Personalizados</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cuidados de la prenda</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-[10px] uppercase tracking-[0.3em] font-bold text-gold-accent mb-6">Newsletter</h5>
+<p class="text-slate-500 dark:text-slate-400 text-xs mb-4">Suscríbete para recibir lanzamientos exclusivos.</p>
+<form class="flex border-b border-slate-300 dark:border-slate-700 pb-2">
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-slate-400" placeholder="Email" type="email"/>
+<button class="text-primary material-symbols-outlined" type="submit">arrow_forward</button>
+</form>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gold-accent/5 text-[10px] uppercase tracking-widest text-slate-400 font-medium">
+<p>© 2024 Encanto &amp; Color Boutique. Todos los derechos reservados.</p>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a class="hover:text-slate-600" href="#">Privacidad</a>
+<a class="hover:text-slate-600" href="#">Términos</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+
+```</body></html>
